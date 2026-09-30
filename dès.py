@@ -6,10 +6,11 @@ class De:
     NB_FACES = 6
 
     def __init__(self):
-        self.valeur : int = None
+        self.nb_faces: int = De.NB_FACES
+        self.valeur: int | None = None
 
     def rouler(self):
-        self.valeur = random.randint(1, De.NB_FACES)
+        self.valeur = random.randint(1, self.nb_faces)
         return self.valeur
 
     def afficher(self):
