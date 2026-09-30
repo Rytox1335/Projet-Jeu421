@@ -1,4 +1,7 @@
 import random
+from dès import De
+
+des = De()
 
 class Joueurs:
     def __init__(self,nom,nbr_jetons,lst_lancer, des):
@@ -9,8 +12,7 @@ class Joueurs:
         
     def lancer_des (self):
         for i in range(0,3):
-            rslt = random.randint(0,6)
-            self.lst_lancer.append(rslt)
+            self.lst_lancer.append(des.rouler(self))
         return self.lst_lancer
     
     def retrait_points (self, coup):
