@@ -32,6 +32,9 @@ class Joueurs:
     def afficher_score(self):
         print(f"{self.nom} : {self.nbr_jetons} jetons")
 
+    def ajouter_jetons(self, nombre_jetons):
+        self.nbr_jetons += nombre_jetons
+
     def retrait_points(self, coup):
         self.mettre_a_jour_score(coup)
 
