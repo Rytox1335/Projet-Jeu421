@@ -1,4 +1,3 @@
-import random
 from dès import De
 
 des = De()
@@ -28,4 +27,7 @@ class Joueurs:
             case "autre":
                 self.nbr_jetons -= 1
                 
+    def __str__(self):
+        return self.nbr_jetons
+        
         
