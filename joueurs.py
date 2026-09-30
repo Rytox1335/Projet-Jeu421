@@ -1,6 +1,8 @@
 from dès import De
+from lancer import Lancer
 
 des = De()
+Lancer = Lancer()
 
 class Joueurs:
     def __init__(self,nom,nbr_jetons,lst_lancer, des):
@@ -11,8 +13,18 @@ class Joueurs:
         
     def lancer_des (self):
         for i in range(0,3):
-            self.lst_lancer.append(des.rouler(self))
-        return self.lst_lancer
+            lancer =des.rouler(De)
+            if i == 0:
+                Lancer.face1 = lancer
+                self.lst_lancer.append(lancer)
+            elif i == 1 : 
+                Lancer.face2 = lancer
+                self.lst_lancer.append(lancer)
+            else:
+                Lancer.face3=lancer
+                self.lst_lancer.append(lancer)
+        return Lancer
+                
     
     def retrait_points (self, coup):
         match coup:
