@@ -27,4 +27,5 @@ class De:
 if __name__ == "__main__":
     d = De()
     for _ in range(5):
+        d.rouler()
         d.afficher()
